@@ -1,12 +1,12 @@
 import React from "react";
-import "./App.css";
+import Main from "component/Main";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <p>Hello, world!</p>
+    <div className="container max-w-3xl mx-auto">
+      <Main />
     </div>
   );
-}
+};
 
 export default App;
