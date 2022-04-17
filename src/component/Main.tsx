@@ -23,27 +23,27 @@ const Main = () => {
         <Rule setMainState={setMainState} />
       ) : gameState === "STAGE1" ? (
         <>
-          {/* <Timer setMainState={setMainState} /> */}
+          <Timer setMainState={setMainState} />
           <Stage1 setMainState={setMainState} />
         </>
       ) : gameState === "STAGE2" ? (
         <>
-          {/* <Timer setMainState={setMainState} /> */}
+          <Timer setMainState={setMainState} />
           <Stage2 setMainState={setMainState} />
         </>
       ) : gameState === "STAGE3" ? (
         <>
-          {/* <Timer setMainState={setMainState} /> */}
+          <Timer setMainState={setMainState} />
           <Stage3 setMainState={setMainState} />
         </>
       ) : gameState === "STAGE4" ? (
         <>
-          {/* <Timer setMainState={setMainState} /> */}
+          <Timer setMainState={setMainState} />
           <Stage4 setMainState={setMainState} />
         </>
       ) : gameState === "STAGE5" ? (
         <>
-          {/* <Timer setMainState={setMainState} /> */}
+          <Timer setMainState={setMainState} />
           <Stage5 setMainState={setMainState} />
         </>
       ) : gameState === "CLEAR" ? (
