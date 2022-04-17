@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       letterSpacing: {
-        super: { widest: "1em" },
+        super: { widest: "2em" },
       },
       keyframes: {
         blink1: {
