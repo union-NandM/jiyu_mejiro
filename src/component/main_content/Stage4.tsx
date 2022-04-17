@@ -11,7 +11,7 @@ const Stage4 = ({ setMainState }: MainPartsProps) => {
         i === correctPos ? (
           <span
             key={i}
-            className={`text-lg sm:text-xl w-full ${
+            className={`text-lg sm:text-xl w-full cursor-pointer ${
               spacing[Math.floor(Math.random() * 2)]
             }`}
             onClick={() => {
@@ -23,7 +23,7 @@ const Stage4 = ({ setMainState }: MainPartsProps) => {
         ) : (
           <span
             key={i}
-            className={`text-lg sm:text-xl w-full ${
+            className={`text-lg sm:text-xl w-full cursor-pointer ${
               spacing[Math.floor(Math.random() * 2)]
             }`}
             onClick={() => {

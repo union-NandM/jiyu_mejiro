@@ -21,7 +21,7 @@ const Stage5 = ({ setMainState }: MainPartsProps) => {
         i === correctPos ? (
           <div
             key={i}
-            className={`text-lg sm:text-xl text-center w-full ${
+            className={`text-lg sm:text-xl text-center w-full cursor-pointer ${
               animations[Math.floor(Math.random() * 9)]
             }`}
             onClick={() => {
@@ -33,7 +33,7 @@ const Stage5 = ({ setMainState }: MainPartsProps) => {
         ) : (
           <div
             key={i}
-            className={`text-lg sm:text-xl text-center w-full ${
+            className={`text-lg sm:text-xl text-center w-full cursor-pointer ${
               animations[Math.floor(Math.random() * 9)]
             }`}
             onClick={() => {

@@ -9,7 +9,7 @@ const Stage3 = ({ setMainState }: MainPartsProps) => {
         i === correctPos ? (
           <div
             key={i}
-            className="text-lg sm:text-xl text-center w-full"
+            className="text-lg sm:text-xl text-center w-full cursor-pointer"
             onClick={() => {
               goToNext({ setMainState, state: "STAGE4" });
             }}
@@ -19,7 +19,7 @@ const Stage3 = ({ setMainState }: MainPartsProps) => {
         ) : (
           <div
             key={i}
-            className="text-lg sm:text-xl text-center w-full"
+            className="text-lg sm:text-xl text-center w-full cursor-pointer"
             onClick={() => {
               goToNext({ setMainState, state: "GAMEOVER" });
             }}

@@ -20,7 +20,7 @@ const Stage2 = ({ setMainState }: MainPartsProps) => {
         i === correctPos ? (
           <div className="w-full h-4 sm:h-20 relative" key={i}>
             <span
-              className={`absolute ${fontSize[Math.floor(Math.random() * 3)]} ${
+              className={`absolute cursor-pointer ${fontSize[Math.floor(Math.random() * 3)]} ${
                 pos[Math.floor(Math.random() * 4)]
               }`}
               onClick={() => {
@@ -33,7 +33,7 @@ const Stage2 = ({ setMainState }: MainPartsProps) => {
         ) : (
           <div className="w-full h-20 relative" key={i}>
             <span
-              className={`absolute ${fontSize[Math.floor(Math.random() * 3)]} ${
+              className={`absolute cursor-pointer ${fontSize[Math.floor(Math.random() * 3)]} ${
                 pos[Math.floor(Math.random() * 4)]
               }`}
               onClick={() => {
