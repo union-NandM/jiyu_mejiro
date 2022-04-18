@@ -1,7 +1,7 @@
-import React from "react";
 import { Button } from "component/main_content/parts";
 import { MainPartsProps } from "type";
 import goToNext from "function/goToNext";
+import { CORRECT, DUMMY } from "game-settings";
 
 const Stage1 = ({ setMainState }: MainPartsProps) => {
   const correctPos = Math.floor(Math.random() * 4);
@@ -18,7 +18,7 @@ const Stage1 = ({ setMainState }: MainPartsProps) => {
             additionalStyle="w-full"
             size="grid"
           >
-            クソリプ
+            {CORRECT}
           </Button>
         ) : (
           <Button
@@ -29,7 +29,7 @@ const Stage1 = ({ setMainState }: MainPartsProps) => {
             size="grid"
             additionalStyle="w-full"
           >
-            クリスプ
+            {DUMMY}
           </Button>
         )
       )}

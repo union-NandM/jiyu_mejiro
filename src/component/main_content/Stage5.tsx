@@ -1,4 +1,5 @@
 import goToNext from "function/goToNext";
+import { CORRECT, DUMMY } from "game-settings";
 import { MainPartsProps } from "type";
 
 const animations = [
@@ -28,7 +29,7 @@ const Stage5 = ({ setMainState }: MainPartsProps) => {
               goToNext({ setMainState, state: "CLEAR" });
             }}
           >
-            クソリプ
+            {CORRECT}
           </div>
         ) : (
           <div
@@ -40,7 +41,7 @@ const Stage5 = ({ setMainState }: MainPartsProps) => {
               goToNext({ setMainState, state: "GAMEOVER" });
             }}
           >
-            クリスプ
+            {DUMMY}
           </div>
         )
       )}

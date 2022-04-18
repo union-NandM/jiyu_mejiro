@@ -1,4 +1,5 @@
 import goToNext from "function/goToNext";
+import { CORRECT, DUMMY } from "game-settings";
 import { MainPartsProps } from "type";
 
 const Stage3 = ({ setMainState }: MainPartsProps) => {
@@ -14,7 +15,7 @@ const Stage3 = ({ setMainState }: MainPartsProps) => {
               goToNext({ setMainState, state: "STAGE4" });
             }}
           >
-            クソリプ
+            {CORRECT}
           </div>
         ) : (
           <div
@@ -24,7 +25,7 @@ const Stage3 = ({ setMainState }: MainPartsProps) => {
               goToNext({ setMainState, state: "GAMEOVER" });
             }}
           >
-            クリスプ
+            {DUMMY}
           </div>
         )
       )}

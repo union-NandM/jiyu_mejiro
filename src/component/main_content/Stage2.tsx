@@ -1,4 +1,5 @@
 import goToNext from "function/goToNext";
+import { CORRECT, DUMMY } from "game-settings";
 import { MainPartsProps } from "type";
 
 const fontSize = [
@@ -27,7 +28,7 @@ const Stage2 = ({ setMainState }: MainPartsProps) => {
                 goToNext({ setMainState, state: "STAGE3" });
               }}
             >
-              クソリプ
+              {CORRECT}
             </span>
           </div>
         ) : (
@@ -40,7 +41,7 @@ const Stage2 = ({ setMainState }: MainPartsProps) => {
                 setMainState("GAMEOVER");
               }}
             >
-              クリスプ
+              {DUMMY}
             </span>
           </div>
         )

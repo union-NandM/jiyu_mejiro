@@ -1,3 +1,4 @@
+import { TIME_LIMIT } from "game-settings";
 import { useEffect, useRef, useState } from "react";
 import { MainPartsProps } from "type";
 
@@ -16,7 +17,7 @@ const useTimer = (onUpdate: () => void) => {
 };
 
 const Timer = ({ setMainState }: MainPartsProps) => {
-  const [time, updateTime] = useState(3);
+  const [time, updateTime] = useState(TIME_LIMIT);
   useTimer(() => updateTime((t) => t - 1));
   useEffect(() => {
     if (time === 0) setMainState("GAMEOVER");

@@ -1,4 +1,5 @@
 import goToNext from "function/goToNext";
+import { CORRECT, DUMMY } from "game-settings";
 import { MainPartsProps } from "type";
 
 const spacing = ["tracking-tighter", "tracking-super-widest"];
@@ -18,7 +19,7 @@ const Stage4 = ({ setMainState }: MainPartsProps) => {
               goToNext({ setMainState, state: "STAGE5" });
             }}
           >
-            クソリプ
+            {CORRECT}
           </span>
         ) : (
           <span
@@ -30,7 +31,7 @@ const Stage4 = ({ setMainState }: MainPartsProps) => {
               goToNext({ setMainState, state: "GAMEOVER" });
             }}
           >
-            クリスプ
+            {DUMMY}
           </span>
         )
       )}
