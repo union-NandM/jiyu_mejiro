@@ -18,33 +18,22 @@ const Stage5 = ({ setMainState }: MainPartsProps) => {
   const correctPos = Math.floor(Math.random() * 27);
   return (
     <div className="w-full px-10 grid grid-cols-3 gap-2">
-      {[...Array(27)].map((_, i) =>
-        i === correctPos ? (
-          <div
-            key={i}
-            className={`text-lg sm:text-xl text-center w-full cursor-pointer ${
-              animations[Math.floor(Math.random() * 9)]
-            }`}
-            onClick={() => {
-              goToNext({ setMainState, state: "CLEAR" });
-            }}
-          >
-            {CORRECT}
-          </div>
-        ) : (
-          <div
-            key={i}
-            className={`text-lg sm:text-xl text-center w-full cursor-pointer ${
-              animations[Math.floor(Math.random() * 9)]
-            }`}
-            onClick={() => {
-              goToNext({ setMainState, state: "GAMEOVER" });
-            }}
-          >
-            {DUMMY}
-          </div>
-        )
-      )}
+      {[...Array(27)].map((_, i) => (
+        <div
+          key={i}
+          className={`text-lg sm:text-xl text-center w-full cursor-pointer ${
+            animations[Math.floor(Math.random() * 9)]
+          }`}
+          onClick={() => {
+            goToNext({
+              setMainState,
+              state: i === correctPos ? "CLEAR" : "GAMEOVER",
+            });
+          }}
+        >
+          {i === correctPos ? CORRECT : DUMMY}
+        </div>
+      ))}
     </div>
   );
 };

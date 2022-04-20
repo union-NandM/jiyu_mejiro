@@ -17,35 +17,23 @@ const Stage2 = ({ setMainState }: MainPartsProps) => {
   const correctPos = Math.floor(Math.random() * 10);
   return (
     <div className="w-full px-10 grid grid-cols-2">
-      {[...Array(10)].map((_, i) =>
-        i === correctPos ? (
-          <div className="w-full h-4 sm:h-20 relative" key={i}>
-            <span
-              className={`absolute cursor-pointer ${fontSize[Math.floor(Math.random() * 3)]} ${
-                pos[Math.floor(Math.random() * 4)]
-              }`}
-              onClick={() => {
-                goToNext({ setMainState, state: "STAGE3" });
-              }}
-            >
-              {CORRECT}
-            </span>
-          </div>
-        ) : (
-          <div className="w-full h-20 relative" key={i}>
-            <span
-              className={`absolute cursor-pointer ${fontSize[Math.floor(Math.random() * 3)]} ${
-                pos[Math.floor(Math.random() * 4)]
-              }`}
-              onClick={() => {
-                setMainState("GAMEOVER");
-              }}
-            >
-              {DUMMY}
-            </span>
-          </div>
-        )
-      )}
+      {[...Array(10)].map((_, i) => (
+        <div className="w-full h-20 relative" key={i}>
+          <span
+            className={`absolute cursor-pointer ${
+              fontSize[Math.floor(Math.random() * 3)]
+            } ${pos[Math.floor(Math.random() * 4)]}`}
+            onClick={() => {
+              goToNext({
+                setMainState,
+                state: i === correctPos ? "STAGE3" : "GAMEOVER",
+              });
+            }}
+          >
+            {i === correctPos ? CORRECT : DUMMY}
+          </span>
+        </div>
+      ))}
     </div>
   );
 };

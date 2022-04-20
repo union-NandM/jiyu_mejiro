@@ -8,31 +8,21 @@ const Stage1 = ({ setMainState }: MainPartsProps) => {
 
   return (
     <div className="grid grid-cols-2 gap-2 w-full px-10 mt-20">
-      {[...Array(4)].map((_, i) =>
-        i === correctPos ? (
-          <Button
-            key={i}
-            clickFunc={() => {
-              goToNext({ setMainState, state: "STAGE2" });
-            }}
-            additionalStyle="w-full"
-            size="grid"
-          >
-            {CORRECT}
-          </Button>
-        ) : (
-          <Button
-            key={i}
-            clickFunc={() => {
-              goToNext({ setMainState, state: "GAMEOVER" });
-            }}
-            size="grid"
-            additionalStyle="w-full"
-          >
-            {DUMMY}
-          </Button>
-        )
-      )}
+      {[...Array(4)].map((_, i) => (
+        <Button
+          key={i}
+          clickFunc={() => {
+            goToNext({
+              setMainState,
+              state: i === correctPos ? "STAGE2" : "GAMEOVER",
+            });
+          }}
+          additionalStyle="w-full"
+          size="grid"
+        >
+          {i === correctPos ? CORRECT : DUMMY}
+        </Button>
+      ))}
     </div>
   );
 };
