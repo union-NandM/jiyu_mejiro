@@ -1,3 +1,4 @@
+import { CORRECT } from "game-settings";
 import { MainStateType } from "type";
 
 type Props = {
@@ -11,7 +12,7 @@ const Header = ({ parentState }: Props) => {
   return (
     <header>
       <h1 className={`${fontSize} text-center ${py} tracking-widest`}>
-        クソリプをさがせ
+        {CORRECT}をさがせ
       </h1>
     </header>
   );

@@ -3,12 +3,12 @@ import { CORRECT, DUMMY } from "game-settings";
 import { MainPartsProps } from "type";
 
 const spacing = ["tracking-tighter", "tracking-super-widest"];
-
+const num = 80;
 const Stage4 = ({ setMainState }: MainPartsProps) => {
-  const correctPos = Math.floor(Math.random() * 40);
+  const correctPos = Math.floor(Math.random() * num);
   return (
     <div className="w-full px-10">
-      {[...Array(40)].map((_, i) =>
+      {[...Array(num)].map((_, i) =>
         i === correctPos ? (
           <span
             key={i}
