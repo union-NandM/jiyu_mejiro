@@ -7,7 +7,7 @@ const num = 80;
 const Stage4 = ({ setMainState }: MainPartsProps) => {
   const correctPos = Math.floor(Math.random() * num);
   return (
-    <div className="w-full px-10">
+    <div className="w-full mx-auto sm:max-w-md">
       {[...Array(num)].map((_, i) =>
         i === correctPos ? (
           <span
